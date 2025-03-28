@@ -1,7 +1,7 @@
-const eloIniziale = document.querySelector('.js-initial-elo')
-const eloAvversario = document.querySelector('.js-opponent-elo')
-const k = document.querySelector('.js-k')
-const risultato = document.querySelector('.js-result')
+let eloIniziale = document.querySelector('.js-initial-elo')
+let eloAvversario = document.querySelector('.js-opponent-elo')
+let k = document.querySelector('.js-k')
+let risultato = document.querySelector('.js-result')
 
 function calcolaElo(eloIniziale, eloAvversario, k, risultato) {
 
@@ -18,6 +18,11 @@ function calcolaElo(eloIniziale, eloAvversario, k, risultato) {
   let punteggioAtteso = 1 / (1 + Math.pow(10, (eloAvversario.value - eloIniziale.value) / 400))
   const variazione = k.value * (risultato - punteggioAtteso)
 
+  eloIniziale = eloIniziale.value;
+  let nuovoElo = Number(eloIniziale) + variazione;
+  document.querySelector('.js-new-elo')
+    .innerHTML = `Nuovo Elo: ${nuovoElo}`
+
   return variazione;
 }
 
@@ -30,4 +35,6 @@ document.querySelector('.js-calculate-button')
 .addEventListener('click', () => {  
   updateResult(calcolaElo(eloIniziale, eloAvversario, k, risultato));
 })
+
+
 
