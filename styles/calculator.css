@@ -9,3 +9,13 @@
   align-items: center;
   flex-direction: column;
 }
+
+.pagina-torneo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clicca-qui {
+  margin-left: 10px;
+}

@@ -19,10 +19,14 @@ function calcolaElo(eloIniziale, eloAvversario, k, risultato) {
   const variazione = k.value * (risultato - punteggioAtteso)
 
   eloIniziale = eloIniziale.value;
-  let nuovoElo = Number(eloIniziale) + variazione;
+  eloAvversario = eloAvversario.value
+  let nuovoElo = Math.round(Number(eloIniziale) + variazione);
   document.querySelector('.js-new-elo')
     .innerHTML = `Nuovo Elo: ${nuovoElo}`
 
+  let differenzaElo = Number(eloIniziale) - Number(eloAvversario);
+  document.querySelector('.js-elo-difference')
+    .innerHTML = `Differenza Elo: ${differenzaElo}`;
   return variazione;
 }
 
