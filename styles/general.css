@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+  font-family: Kanit, arial;
+  background-color: rgb(201, 231, 247);
+  color: rgb(120, 134, 199);
+  font-size: 20px;
+}
+
+div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  background-color: rgb(201, 209, 238);
+  border: 1px solid rgb(45, 51, 107);
+  color: rgb(45, 51, 107);
+  font-family: kanit;
+  font-size: 17px
+}
+
+input::placeholder {
+  color: rgb(45, 51, 107);
+  font-family: kanit;
+  font-size: 17px
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+  color: rgb(45, 51, 107);
+  font-family: kanit;
+  font-size: 20px
+}
+
+label {
+  color: rgb(45, 51, 107);
+  font-family: kanit;
+  font-size: 20px
+}
+
+select {
+  color: rgb(45, 51, 107);
+  font-family: kanit;
+  font-size: 17px;
+  padding: 5px;
+}
+
+button {
+  background-color: rgb(201, 209, 238);
+  border: 1px solid rgb(45, 51, 107);
+  color: rgb(45, 51, 107);
+  font-family: kanit;
+  font-size: 17px;
+  padding: 5px;
+
+  cursor: pointer;
+}
