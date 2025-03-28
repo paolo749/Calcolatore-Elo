@@ -15,27 +15,31 @@
         <p class="title">Calcolatore punteggio ELO</p>
       </div>
       
-      <div class="inputs-container">
-        <input type="number" class="js-initial-elo input" placeholder="Elo Iniziale">
-        <input type="number"class="js-opponent-elo input" placeholder="Elo Avversario">
-        <input type="number" class="js-k input" placeholder="Valore K">
-      </div>
-      <div class="result-container">
-        <label for="Risultato">Risultato:</label>
-        <select class="js-result" id="Risultato" name="Risultato">
-          <option class="js-result" value="default"></option>
-          <option class="js-result" value="vittoria">Vittoria</option>
-          <option class="js-result" value="patta">Patta</option>
-          <option class="js-result" value="sconfitta">Sconfitta</option>
-        </select>
-
-        <button class="js-calculate-button">Calcola</button>
-      </div>
+      <div class="js-calculator-container calculator-container">
+        <div class="inputs-container">
+          <input type="number" class="js-initial-elo input" placeholder="Elo Iniziale">
+          <input type="number"class="js-opponent-elo input" placeholder="Elo Avversario">
+          <input type="number" class="js-k input" placeholder="Valore K">
       
-      <div class="outputs-container">
-        <p class="js-final-elo">Variazione:</p>
+          <button class="js-add-game-button">+</button>
+          <button class="js-add-game-button">-</button>
+        </div>
+        <div class="result-container">
+          <label for="Risultato">Risultato:</label>
+          <select class="js-result" id="Risultato" name="Risultato">
+            <option class="js-result" value="default"></option>
+            <option class="js-result" value="vittoria">Vittoria</option>
+            <option class="js-result" value="patta">Patta</option>
+            <option class="js-result" value="sconfitta">Sconfitta</option>
+          </select>
+      
+          <button class="js-calculate-button">Calcola</button>
+        </div>
+        
+        <div class="outputs-container">
+          <p class="js-final-elo">Variazione:</p>
+        </div>
       </div>
-     
 
       <script type="module" src="scripts/elo-calculator.js"></script>
     </body>

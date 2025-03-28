@@ -21,25 +21,13 @@ function calcolaElo(eloIniziale, eloAvversario, k, risultato) {
   return variazione;
 }
 
-document.querySelector('.js-calculate-button')
-  .addEventListener('click', () => {  
-    updateResult(calcolaElo(eloIniziale, eloAvversario, k, risultato));
-  })
-
 function updateResult(variazione) {
   document.querySelector('.js-final-elo')
   .innerHTML = `Variazione: ${Math.round(variazione)}`;
 }
 
+document.querySelector('.js-calculate-button')
+.addEventListener('click', () => {  
+  updateResult(calcolaElo(eloIniziale, eloAvversario, k, risultato));
+})
 
-
-
-
-
-
-// Formule (temp)
-/*
-  Variazione = K * (Risultato - Punteggio Atteso)
-
-  Punteggio Atteso = (1 / 1 + 10**((Punteggio Avversario - Punteggio Persona)) / 400
-*/
